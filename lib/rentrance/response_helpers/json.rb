@@ -1,21 +1,21 @@
 require_relative 'statuses'
 
-module Entrance
+module Rentrance
   module ResponseHelpers
     module JSON
       def json_render(payload, status)
         render json: payload, status: status
       end
 
-      def json_error!(payload, status = ::Entrance::ResponseHelpers::Statuses::ERROR)
+      def json_error!(payload, status = ::Rentrance::ResponseHelpers::Statuses::ERROR)
         json_render payload, status
       end
 
-      def json_success!(payload, status = ::Entrance::ResponseHelpers::Statuses::SUCCESS)
+      def json_success!(payload, status = ::Rentrance::ResponseHelpers::Statuses::SUCCESS)
         json_render payload, status
       end
 
-      def json_created!(payload, status = ::Entrance::ResponseHelpers::Statuses::CREATED)
+      def json_created!(payload, status = ::Rentrance::ResponseHelpers::Statuses::CREATED)
         json_render payload, status
       end
     end

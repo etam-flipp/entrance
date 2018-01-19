@@ -1,4 +1,4 @@
-module Entrance
+module Rentrance
   module ResponseHelpers
     module Statuses
       SUCCESS = 200

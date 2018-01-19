@@ -1,8 +1,8 @@
-require './lib/entrance/version'
+require './lib/rentrance/version'
 
 Gem::Specification.new do |s|
-  s.name        = 'entrance'
-  s.version     = Entrance::Version.to_s
+  s.name        = 'rentrance'
+  s.version     = Rentrance::Version.to_s
   s.licenses    = ['MIT']
   s.summary     = 'An attempt to hook up a Rails action controller with Grape parameter validation DSL'
   s.authors     = ["Edward Tam"]

@@ -1,2 +1,2 @@
-# Entrance
+# Rentrance
 Guard Your Rails Controller Actions with Grape Parameter Validations.

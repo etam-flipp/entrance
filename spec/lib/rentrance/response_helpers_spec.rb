@@ -1,12 +1,12 @@
 require 'spec_helper'
 
-describe Entrance::ResponseHelpers do
+describe Rentrance::ResponseHelpers do
   let(:controller) { ActionController::Base.new }
 
   describe 'json' do
     let(:klass) do
-      Class.new(Entrance::Base) do
-        include Entrance::ResponseHelpers::JSON
+      Class.new(Rentrance::Base) do
+        include Rentrance::ResponseHelpers::JSON
       end
     end
 
@@ -57,7 +57,7 @@ describe Entrance::ResponseHelpers do
       before do
         expect(controller)
           .to receive(:render)
-          .with(json: payload, status: Entrance::ResponseHelpers::Statuses::ERROR)
+          .with(json: payload, status: Rentrance::ResponseHelpers::Statuses::ERROR)
           .and_return(nil)
       end
 
@@ -84,7 +84,7 @@ describe Entrance::ResponseHelpers do
       before do
         expect(controller)
           .to receive(:render)
-          .with(json: payload, status: Entrance::ResponseHelpers::Statuses::SUCCESS)
+          .with(json: payload, status: Rentrance::ResponseHelpers::Statuses::SUCCESS)
           .and_return(nil)
       end
 
@@ -111,7 +111,7 @@ describe Entrance::ResponseHelpers do
       before do
         expect(controller)
           .to receive(:render)
-          .with(json: payload, status: Entrance::ResponseHelpers::Statuses::CREATED)
+          .with(json: payload, status: Rentrance::ResponseHelpers::Statuses::CREATED)
           .and_return(nil)
       end
 

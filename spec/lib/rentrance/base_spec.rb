@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe Entrance::Base do
+describe Rentrance::Base do
   let(:controller) { ActionController::Base.new }
 
-  class Klass < Entrance::Base
+  class Klass < Rentrance::Base
     params do
       requires :req, type: String
       optional :opt, type: String
@@ -25,7 +25,7 @@ describe Entrance::Base do
 
       subject { Klass.new(controller: controller) }
       it 'raises an exception' do
-        expect { subject.perform }.to raise_error(Entrance::Exceptions::ValidationErrors)
+        expect { subject.perform }.to raise_error(Rentrance::Exceptions::ValidationErrors)
       end
     end
   end
@@ -38,9 +38,9 @@ describe Entrance::Base do
       allow(controller).to receive(:params).and_return(controller_params)
     end
 
-    subject { Entrance::Base }
+    subject { Rentrance::Base }
     it 'delegates controller methods to the controller context' do
-      Entrance::Base::CONTROLLER_DELEGATIONS.each do |meth|
+      Rentrance::Base::CONTROLLER_DELEGATIONS.each do |meth|
         klass = Class.new(subject) do
           redefine_method(:perform) { send(meth) }
         end

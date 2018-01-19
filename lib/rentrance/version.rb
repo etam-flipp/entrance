@@ -1,4 +1,4 @@
-module Entrance
+module Rentrance
   module Version
     extend self
 

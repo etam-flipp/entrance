@@ -9,7 +9,7 @@ require 'forwardable'
 
 require_relative 'exceptions'
 
-class Entrance::Base
+class Rentrance::Base
   include Grape::DSL::Validations
   include Grape::DSL::Settings
   include Grape::DSL::InsideRoute::PostBeforeFilter
@@ -84,7 +84,7 @@ protected
       end
     end
 
-    raise Entrance::Exceptions::ValidationErrors, errors: exceptions if exceptions.any?
+    raise Rentrance::Exceptions::ValidationErrors, errors: exceptions if exceptions.any?
   end
 
   def _configure_params!
