@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.licenses    = ['MIT']
   s.summary     = 'An attempt to hook up a Rails action controller with Grape parameter validation DSL'
   s.authors     = ["Edward Tam"]
-  s.email       = 'edward.tam@wishabi.com'
+  s.email       = 'edward6882990@gmail.com'
   s.files       = ['lib/entrance.rb']
 
   s.add_development_dependency 'grape', '~> 1.0.2'
