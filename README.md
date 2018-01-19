@@ -2,6 +2,14 @@
 Guard Your Rails Controller Actions with Grape Parameter Validations.
 
 ## Usage
+Include the gem in your `Gemfile`:
+```ruby
+gem 'rentrance'
+```
+and then run bundle:
+```
+bundle install
+```
 
 An entrance can serve the purpose of a single API endpoint. [Grape Pamaeters Validations](https://github.com/ruby-grape/grape) is integrated:
 ```ruby
