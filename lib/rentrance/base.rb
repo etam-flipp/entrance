@@ -33,6 +33,7 @@ class Rentrance::Base
     _validate_params!
   end
 
+  # :nocov:
   def perform
     raise NotImplementedError
   end
@@ -40,6 +41,7 @@ class Rentrance::Base
   def params
     @_params ||= declared(controller.params.to_unsafe_hash).deep_symbolize_keys
   end
+  # :nocov:
 
 protected
 
@@ -64,6 +66,7 @@ protected
     @_validators ||= self.class.namespace_stackable(:validations).map(&:create_validator)
   end
 
+  # :nocov:
   def _validate_params!
     exceptions = []
 
@@ -86,6 +89,7 @@ protected
 
     raise Rentrance::Exceptions::ValidationErrors, errors: exceptions if exceptions.any?
   end
+  # :nocov:
 
   def _configure_params!
     route_setting(:saved_declared_params, self.class.namespace_stackable(:declared_params))

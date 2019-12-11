@@ -14,6 +14,26 @@ describe Rentrance::Base do
     end
   end
 
+  describe 'params' do
+    let(:controller_params) {{ req: 'required', opt: 'something' }}
+
+    before do
+      allow(controller_params).to receive(:to_unsafe_hash).and_return(controller_params)
+      allow(controller).to receive(:params).and_return(controller_params)
+    end
+
+    subject { Klass.new(controller: controller) }
+
+    it 'has direct access to the declared parameters' do
+      expect(subject.req).to eq(controller_params[:req])
+      expect(subject.opt).to eq(controller_params[:opt])
+    end
+
+    it 'raises an exception when trying to access a param that is not declared' do
+      expect { subject.something_undeclared }.to raise_error
+    end
+  end
+
   describe 'param validations' do
     context 'when required param is not provided' do
       let(:controller_params) {{ opt: 'something' }}
