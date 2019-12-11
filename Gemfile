@@ -7,4 +7,5 @@ group :test do
   gem 'byebug'
   gem 'rspec'
   gem 'rspec-mocks'
+  gem 'simplecov', '0.17.1', require: false
 end
