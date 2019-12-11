@@ -1,3 +1,7 @@
+<a href="https://codeclimate.com/github/edwardlftam/rentrance/maintainability"><img src="https://api.codeclimate.com/v1/badges/2f0d64e4e6ae2fbcb611/maintainability" /></a>
+
+<a href="https://codeclimate.com/github/edwardlftam/rentrance/test_coverage"><img src="https://api.codeclimate.com/v1/badges/2f0d64e4e6ae2fbcb611/test_coverage" /></a>
+
 # Rentrance
 Guard Your Rails Controller Actions with Grape Parameter Validations.
 
